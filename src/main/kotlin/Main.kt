@@ -1,21 +1,37 @@
-/* In this array the 0th index will contain question,
-the 1st index contains correct ans and rest all (2,3,4) will contain wrong answers*/
+fun main() {
 
-fun main(){
-    val questions =
-        arrayOf( "where was the buddha born",
-                "which company does Facebook belongs to",
-                "Which is the most used greeting word")
+    val questions = mutableListOf(
+        arrayOf("where was the buddha born", "Nepal", "India"),
+        arrayOf("which company does Facebook belongs to", "Meta", "Google"),
+        arrayOf("Which is the most used greeting word", "Hello", "Namaste")
 
-    val correctAnswers = arrayOf("Nepal","Meta","Hello")
-    val wrongAnswer = arrayOf("India","Google","Namaste")
-    val quiz = arrayOf(questions,correctAnswers,wrongAnswer)
-var i =0;
-    quiz.forEach{ hi ->
-        questions[i].also(::println)
-        correctAnswers[i].also(::println)
-        wrongAnswer[i].also(::println)
-        println("======================================")
-        i++
+    )
+   lateinit var question:String
+    lateinit var correctAns:String
+    lateinit var wrongAns:String
+  lateinit  var addQuestion:List<Array<String>>
+
+    println("How many question you're adding ")
+    val no = readln().toInt()
+    for (i in 1..no) {
+        println("Please Enter question")
+        question = readln()
+        println("Please Enter Correct Answer")
+        correctAns = readln()
+        println("Please Enter wrong answer")
+        wrongAns = readln()
+        addQuestion =  listOf(arrayOf(question,correctAns,wrongAns))
+
+        questions += addQuestion
+        println("Question added")
+    }
+
+questions.forEach { array ->
+        array.forEach {
+            println(it)
+
+        }
+println("_______________________________________________")
     }
 }
+
