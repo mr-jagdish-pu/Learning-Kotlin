@@ -14,7 +14,7 @@ fun main() {
 
     println("How many question you're adding ")
     val no = readln().toInt()
-    for (i in 1..no) {
+    for (i in 1..no) { //runs $no times from 1 to
         println("Please Enter question")
         question = readln()
         println("Please Enter Correct Answer")
@@ -24,6 +24,7 @@ fun main() {
         addQuestion =  listOf(arrayOf(question,correctAns,wrongAns))
 
         questions += addQuestion
+        //{koisan equal to loisan plus addkoisan}
         println("Question added")
     }
 
