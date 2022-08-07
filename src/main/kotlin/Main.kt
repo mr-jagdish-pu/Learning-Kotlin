@@ -6,6 +6,7 @@ fun main() {
         arrayOf("Which is the most used greeting word", "Hello", "Namaste")
 
     )
+//    A mutable list consist of question[o] index correct wrong answer in [1],[2]    INDEX  respr
    lateinit var question:String
     lateinit var correctAns:String
     lateinit var wrongAns:String
